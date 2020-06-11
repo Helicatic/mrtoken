@@ -15,3 +15,19 @@ closeMenu.addEventListener("click", function (evt) {
   menu.classList.remove("menu-show");
   overlay.classList.remove("modal-show");
 });
+
+overlay.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  menu.classList.remove("menu-show");
+  overlay.classList.remove("modal-show");
+});
+
+var header = document.querySelector('.header');
+window.onscroll = function showHeader() {
+
+    if(window.pageYOffset > 0){
+        header.classList.add('header_fixed');
+    } else{
+        header.classList.remove('header_fixed');
+    }
+}
