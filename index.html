@@ -24,8 +24,8 @@
       </nav>
       <nav class="header__user">
         <ul class="header__list">
-          <li class="header__user-item"><a href="#">Вход</a></li>
-          <li class="header__user-item"><a href="#">Регистрация</a></li>
+          <li class="header__user-item "><a href="#" class="login-btn">Вход</a></li>
+          <li class="header__user-item "><a href="#" class="register-btn">Регистрация</a></li>
         </ul>
       </nav>
       <!-- <button class="header__toggle"><img src="img/burger.svg" width="30px"></button> -->
@@ -61,8 +61,8 @@
       <li class="header__mobile-item"><a href="#">Элемент 2</a></li>
       <li class="header__mobile-item"><a href="#">Элемент 3</a></li>
       <li class="header__mobile-item"><a href="#">Элемент 4</a></li>
-      <li class="header__mobile-item"><a href="#">Вход</a></li>
-      <li class="header__mobile-item"><a href="#">Регистрация</a></li>
+      <li class="header__mobile-item "><a href="#" class="login-btn-mob">Вход</a></li>
+      <li class="header__mobile-item "><a href="#" class="register-btn-mob">Регистрация</a></li>
     </ul>
     <button class="header__mobile-close"><img src="img/close.svg" width="30px"></button>
   </div>
@@ -85,8 +85,56 @@
     </section>
   </main>
 
-  <div class="modal-overlay"></div>
 
+
+
+  <section class="modal modal-login">
+		<h2>Войдите</h2>
+		<p class="modal-login-description">Введите свой логин и пароль :</p>
+		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+				<input class="modal-input login-input" id="user-login" type="text" name="login" placeholder="Логин">
+			</p>
+			<p>
+				<input class="modal-input password-input" id="user-password" type="password" name="password" placeholder="Пароль">
+			</p>
+			<p class="login-help">
+				<label class="login-checkbox">
+					<input type="checkbox" name="remember" class="hidden" id="login-password-info">
+					Запомните меня
+				</label>
+		 	  <a href="#" class="restore">Я забыл пароль!</a>
+			</p>
+			<button class="login-submit" type="submit">Войти</button>
+		</form>
+		<button class="modal-close login-close" type="button"><img src="img/close.svg" width="15px"></button>
+	</section>
+
+  <section class="modal modal-register">
+		<h2>Регистрация</h2>
+		<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+			<p>
+        <label class="register-label" for="user-register-login">Придумайте логин :</label>
+				<input class="modal-input login-input" id="user-register-login" type="text" name="reg-login" placeholder="Логин">
+			</p>
+      <p>
+        <label class="register-label" for="user-register-email">Ваш e-mail :</label>
+				<input class="modal-input login-input" id="user-register-email" type="email" name="reg-email" placeholder="E-mail">
+			</p>
+      <p>
+        <label class="register-label" for="user-register-pass">Придумайте пароль :</label>
+				<input class="modal-input password-input" id="user-register-pass" type="password" name="reg-password" placeholder="Пароль">
+			</p>
+			<p>
+        <label class="register-label" for="user-register-pass-rep">Повторите пароль :</label>
+				<input class="modal-input password-input" id="user-register-pass-rep" type="password" name="reg-password-rep" placeholder="Повторите пароль">
+			</p>
+			<button class="login-submit" type="submit">Зарегестрироваться</button>
+		</form>
+		<button class="modal-close register-close" type="button"><img src="img/close.svg" width="15px"></button>
+	</section>
+
+  <div class="modal-overlay"></div>
 
   <script src="js/script.js"></script>
 </body>
